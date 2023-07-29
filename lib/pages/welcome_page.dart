@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/utils/enum/app_images.dart';
-import 'package:travel_app/widgets/large_text_widget.dart';
+import 'package:travel_app/utils/enums/enums.dart';
+import 'package:travel_app/widgets/widgets.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -34,11 +34,24 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
             child: Container(
               margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
-              child: const Row(
+              child: Row(
                 children: [
                   Column(
                     children: [
-                      LargeTextWidget(text: "Trips"),
+                      LargeTextWidget(text: AppStrings.trips.texto),
+                      NormalTextWidget(
+                        text: AppStrings.mountain.texto,
+                        size: 30,
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        width: 250,
+                        child: NormalTextWidget(
+                          text: AppStrings.mountainHikesGiveYou.texto,
+                          size: 14,
+                          color: AppColors.textColor2.color,
+                        ),
+                      ),
                     ],
                   )
                 ],
