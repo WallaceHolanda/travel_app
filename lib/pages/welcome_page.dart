@@ -33,10 +33,12 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
             child: Container(
-              margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
+              margin: const EdgeInsets.only(top: 140, left: 20, right: 20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       LargeTextWidget(text: AppStrings.trips.texto),
                       NormalTextWidget(
@@ -45,15 +47,30 @@ class _WelcomePageState extends State<WelcomePage> {
                       ),
                       const SizedBox(height: 20),
                       SizedBox(
-                        width: 250,
+                        width: 240,
                         child: NormalTextWidget(
                           text: AppStrings.mountainHikesGiveYou.texto,
                           size: 14,
                           color: AppColors.textColor2.color,
                         ),
                       ),
+                      const SizedBox(height: 20),
+                      const ResponsiveButtonWidget(),
                     ],
-                  )
+                  ),
+                  Column(
+                    children: List.generate(
+                      3,
+                      (dotIndex) {
+                        return DotWidget(
+                          color: dotIndex == index
+                              ? AppColors.mainColor.color
+                              : AppColors.mainColor.color.withOpacity(0.3),
+                          height: dotIndex == index ? 25 : 8,
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
