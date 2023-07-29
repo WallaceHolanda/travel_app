@@ -3,6 +3,10 @@ enum AppStrings {
   mountain('Mountain'),
   mountainHikesGiveYou(
       'Mountain hikes give you an incredible sense of freedom along with endurance tests'),
+  home('Home'),
+  bar('Bar'),
+  search('Search'),
+  profile('Profile'),
   ;
 
   final String texto;

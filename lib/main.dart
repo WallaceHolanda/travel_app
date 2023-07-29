@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/pages/welcome_page.dart';
+import 'package:travel_app/pages/navpages/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Trabel App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WelcomePage(),
+      home: const MainPage(),
     );
   }
 }
