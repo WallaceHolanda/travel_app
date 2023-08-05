@@ -11,6 +11,8 @@ enum AppStrings {
   places('Places'),
   inspiration('Inspiration'),
   emotions('Emotions'),
+  exploreMore('Explore more'),
+  seeAll('See all'),
   ;
 
   final String texto;

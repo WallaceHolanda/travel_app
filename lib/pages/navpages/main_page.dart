@@ -22,9 +22,7 @@ class _MainPageState extends State<MainPage> {
     ProfilePage(),
   ];
 
-  void onTap(int index) {
-    setState(() => currentPageIndex = index);
-  }
+  void onTap(int index) => setState(() => currentPageIndex = index);
 
   @override
   Widget build(BuildContext context) {

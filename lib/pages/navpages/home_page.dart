@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/utils/enums/app_colors.dart';
 import 'package:travel_app/utils/enums/app_strings.dart';
-import 'package:travel_app/widgets/circle_tab_indicator_widget.dart';
+import 'package:travel_app/utils/enums/enums.dart';
+import 'package:travel_app/widgets/home_page/circle_tab_indicator_widget.dart';
 import 'package:travel_app/widgets/large_text_widget.dart';
+import 'package:travel_app/widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -76,7 +78,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: TabBarView(
               controller: tabController,
               children: [
-                Text(AppStrings.places.texto),
+                ListView.builder(
+                  itemCount: 3,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, _) => CardImageWidget(
+                    image: AppImages.mountain.caminho,
+                  ),
+                ),
                 Text(AppStrings.inspiration.texto),
                 Text(AppStrings.emotions.texto),
               ],
