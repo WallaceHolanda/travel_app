@@ -13,6 +13,10 @@ enum AppStrings {
   emotions('Emotions'),
   exploreMore('Explore more'),
   seeAll('See all'),
+  balloning('Balloning'),
+  hiking('Hiking'),
+  kayaking('Kayaking'),
+  snorkling('Snorkling'),
   ;
 
   final String texto;
