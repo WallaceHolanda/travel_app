@@ -8,6 +8,7 @@ enum AppColors {
   starColor(Color(0xFFe7bb4e)),
   mainTextColor(Color(0xFFababad)),
   buttonBackground(Color(0xFFf1f1f9)),
+  white(Color(0xFFffffff)),
   ;
 
   final Color color;
